@@ -1,7 +1,10 @@
 language: node_js
-  node_js:
-  - stable
-  notifications:
+ node_js:
+ - stable
+ branches:
+   only:
+   - development
+notifications:
     email:
       recipients:
         - conormcbride158@gmail.com     
