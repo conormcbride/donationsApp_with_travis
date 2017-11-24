@@ -1,15 +1,15 @@
 language: node_js
  node_js:
  - stable
-script:
+ script:
     - npm run coverage
-after_success:
+ after_success:
     - npm run report-coverage
-branches:
-    only:
+    branches:
+      only:
       - development
 
-notifications:
+ notifications:
     email:
       recipients:
         - conormcbride158@gmail.com     
