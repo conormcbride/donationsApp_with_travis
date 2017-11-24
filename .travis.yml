@@ -1,20 +1,23 @@
---- 
-after_success: 
-  - "npm run report-coverage"
-branches: 
-  only: 
-    - development
 language: node_js
-node_js: 
-  - stable
-notifications: 
-  email: 
-    on_failure: always
-    on_success: never
-    recipients: 
-      - conormcbride158@gmail.com
-script: 
-  - "npm run coverage"
+node_js:
+ - stable
+script:
+    - npm run coverage
+    - npm run check-coverage
+after_success:
+    - npm run report-coverage
+branches:
+   only:
+    - development
+
+notifications:
+    email:
+      recipients:
+        - conormcbride158@gmail.com     
+        
+      on_success: never        
+      on_failure: always    
+      
 
       
       
